@@ -9,7 +9,7 @@ class RomanosTest(unittest.TestCase):
         self.assertEqual(descomponer(1987), [1,9,8,7])
 
     def test_descomponer_solo_enteros(self):
-        self.assertRaises(SyntaxError, descomponer, 1987.0)
+        self.assertRaises(SyntaxError, entero_a_romano, 1987.0)
 
     def test_convertir_987(self):
         self.assertEqual(convertir([9,8,7]), 'CMLXXXVII')
@@ -18,11 +18,6 @@ class RomanosTest(unittest.TestCase):
         self.assertEqual(entero_a_romano(1987), 'MCMLXXXVII')
         self.assertRaises(OverflowError, entero_a_romano, 4000)
         self.assertRaises(OverflowError, entero_a_romano, 0)
-        self.assertRaises(SyntaxError, entero_a_romano, 1987.0)
-
-
-
-
 
 
 

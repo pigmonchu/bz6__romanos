@@ -97,7 +97,7 @@ def entero_a_romano(numero):
     if not isinstance(numero, int):
         raise SyntaxError(f"{numero} no es un número natural")
 
-    if numero < 0 or numero > 3999:
+    if numero < 1 or numero > 3999:
         raise OverflowError(f"{numero} ha de estar entre 1 y 3999")
 
     ordenes_de_magnitud = descomponer(numero)
